@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import profile from "@/public/Profile.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -7,9 +7,18 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import { useSectionInView } from "@/lib/hooks";
+
+
 export default function Intro() {
+  const { ref } = useSectionInView("Home", 0.5);
+
   return (
-    <section id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+    <section
+      ref={ref}
+      id="home"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+    >
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -80,11 +89,19 @@ export default function Intro() {
           <HiDownload className="opacity-60 group-hover:translate-y-1" />
         </a>
 
-        <a className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full  focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10" href="https://www.linkedin.com/in/pedro-figueiredo-juniorjavascriptreact/" target="_blank">
+        <a
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full  focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
+          href="https://www.linkedin.com/in/pedro-figueiredo-juniorjavascriptreact/"
+          target="_blank"
+        >
           <BsLinkedin />
         </a>
 
-        <a className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10" href="https://github.com/Pedrofigueiredo91" target="_blank">
+        <a
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
+          href="https://github.com/Pedrofigueiredo91"
+          target="_blank"
+        >
           <FaGithubSquare />
         </a>
       </motion.div>
