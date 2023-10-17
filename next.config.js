@@ -5,6 +5,9 @@ const nextConfig = {
             {   protocol :'https',
                 hostname: 'yourimageshare.com'}
         ]
+    },
+    experimental:{ 
+        serverActions: true,
     }
 }
 
