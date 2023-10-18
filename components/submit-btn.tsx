@@ -1,9 +1,10 @@
 import React from "react";
+import { useFormStatus } from "react-dom";
 import { FaPaperPlane } from "react-icons/fa";
-import { experimental_useFormStatus as useFormStatus } from 'react-dom'
+
 
 export default function SubmitBtn() {
-  const { pending } = useFormStatus();
+  const { pending } =useFormStatus();
 
   return (
     <button
