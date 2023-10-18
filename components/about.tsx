@@ -1,43 +1,48 @@
 "use client";
+
+import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
-  const {ref} = useSectionInView("About", 0.75);
+  const { ref } = useSectionInView("About");
 
   return (
     <motion.section
       ref={ref}
-      className="mb-28 mx-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{
-        delay: 0.175,
-      }}
+      transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading> About me</SectionHeading>
-      <p className=" mb-3">
-        After over a decade in international hospitality, spanning six
-        countries, I embarked on a new adventure. My fascination with
-        programming led me to shift gears and pursue web development. I've
-        always been curious about the magic behind striking user experiences,
-        and now I aim to be the one creating them. Problem-solving and
-        continuous learning have always been my passions, and they drive me to
-        excel in this dynamic field. I'm thrilled to be on this journey,
-        transitioning from hospitality to web development, where I can inspire
-        and craft innovative digital solutions while feeding my love for code.
+      <SectionHeading>About me</SectionHeading>
+      <p className="mb-3">
+        After graduating with a degree in{" "}
+        <span className="font-medium">Accounting</span>, I decided to pursue my
+        passion for programming. I enrolled in a coding bootcamp and learned{" "}
+        <span className="font-medium">full-stack web development</span>.{" "}
+        <span className="italic">My favorite part of programming</span> is the
+        problem-solving aspect. I <span className="underline">love</span> the
+        feeling of finally figuring out a solution to a problem. My core stack
+        is{" "}
+        <span className="font-medium">
+          React, Next.js, Node.js, and MongoDB
+        </span>
+        . I am also familiar with TypeScript and Prisma. I am always looking to
+        learn new technologies. I am currently looking for a{" "}
+        <span className="font-medium">full-time position</span> as a software
+        developer.
       </p>
+
       <p>
-        My core stack includes MongoDB, Express.js, React, and Node.js. I'm also
-        proficient with TypeScript and have a passion for exploring new
-        technologies and frameworks. I'm actively seeking a full-time role as a
-        Full Stack Developer, but I'm open to flexible opportunities that align
-        with my skills and enthusiasm for growth. When I'm not in front of my
-        computer, I love to cycle, explore new pubs, restaurants, and travel to
-        new destinations. My passion for adventure extends beyond the digital
-        world
+        <span className="italic">When I'm not coding</span>, I enjoy playing
+        video games, watching movies, and playing with my dog. I also enjoy{" "}
+        <span className="font-medium">learning new things</span>. I am currently
+        learning about{" "}
+        <span className="font-medium">history and philosophy</span>. I'm also
+        learning how to play the guitar.
       </p>
     </motion.section>
   );
