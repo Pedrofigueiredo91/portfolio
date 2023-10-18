@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect } from "react";
+
+import React from "react";
 import profile from "@/public/Profile.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -34,9 +35,9 @@ export default function Intro() {
             <Image
               src={profile}
               alt="profile"
-              width="192"
-              height="192"
-              quality="95"
+              width={192}
+              height={192}
+              quality={95}
               priority={true}
               className="h-24 w-24 object-cover rounded-full border-[0.35rem] border-white shadow-xl"
             />
