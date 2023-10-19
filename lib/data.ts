@@ -132,4 +132,5 @@ export const skillsData = [
   "Bootstrap",
   "Resend",
   "Vercel",
+  "GitHub"
 ] as const;
