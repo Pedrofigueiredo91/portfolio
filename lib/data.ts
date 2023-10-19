@@ -35,7 +35,7 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
+    title: "Graduated bootcamp(Ironhack)",
     location: "London - Remote",
     description:
       "I graduated after 2 months of studying, with over 400h. And now looking for the next step. while learning new technologies and frameworks",
